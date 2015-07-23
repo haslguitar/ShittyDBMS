@@ -5,5 +5,6 @@ The intent of this project is to learn C++.  ShittyDBMS is a database management
 Currently: `g++ main.cpp IOHandler.cpp PlatformSpecificIO.cpp`
 
 ## Contributors
-Cody Fleetwood
+Cody Fleetwood 
+
 James Morse
