@@ -1,5 +1,4 @@
 # ShittyDBMS
-## Synopsis
 The intent of this project is to learn C++.  ShittyDBMS is a database management system that is crossplatform.  It can be extended to have io and storage on different platforms by deriving a new class from IOHandler and StorageHandler respectively.
 
 ## Compilation
