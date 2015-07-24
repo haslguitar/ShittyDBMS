@@ -24,13 +24,13 @@
 //
 //
 //Make sure to compile whatever platform file you need:
-//g++ -std=c++11 -o OutputFile main.cpp IOHandler.cpp MACIO.cpp
+//g++ -std=c++11 -o OutputFile main.cpp IOHandler.cpp ./IOImplementations/MACIO.cpp
 //
 //or for null output, which is basically going to be throw away,
-//g++ -std=c++11 -o OutputFile main.cpp IOHandler.cpp NULLIO.cpp
+//g++ -std=c++11 -o OutputFile main.cpp IOHandler.cpp ./IOImplementations/NULLIO.cpp
 //
 //or for Windows output and compiling with cl.exe,
-//cl main.cpp IOHandler.cpp WINDOWSIO.cpp /FeOutputFile.exe
+//cl main.cpp IOHandler.cpp ./IOImplementations/WINDOWSIO.cpp /FeOutputFile.exe
 //
 //or something like that.  You get the idea, or not!  Muahahahaha!.
 /**************************************/

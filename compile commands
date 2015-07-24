@@ -1,0 +1,3 @@
+cl ./src/apps/ShittyDBMS/main.cpp ./src/libs/src/IOHandler.cpp ./src/libs/src/IOImplementations/StandardConsoleIO.cpp /Fefuckem.exe /I ./src/libs/src
+
+REM g++ -std=c++11 -o fuckem.exe ./src/apps/ShittyDBMS/main.cpp ./src/libs/src/IOHandler.cpp ./src/libs/src/IOImplementations/StandardConsoleIO.cpp -I ./src/libs/src
