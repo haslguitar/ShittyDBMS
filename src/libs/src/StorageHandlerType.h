@@ -2,18 +2,19 @@
 #define __STORAGEHANDLERTYPE__
 
 #include "StorageHandler.h"
+#include "DBTable.h"
 #include <string>
 
 
 class StorageHandlerType : public StorageHandler {
-public:
-	DBTable query(std::string);
 
-	bool setupStorageHandler(...);
+public:
+	bool queryStorage(std::string);
+
+//	bool setupStorageHandler(...);
 
 	~StorageHandlerType();
     
-
 };
 
 

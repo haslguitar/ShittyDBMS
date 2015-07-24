@@ -1,16 +1,15 @@
-#include "StorageHandlerType.h"
 #include "StorageHandler.h"
+#include "StorageHandlerType.h"
 #include "DBTable.h"
 #include <string>
 
-DBTable StorageHandlerType::query(std::string query) {
-	DBTable blankTable;
-	return blankTable;
-}
-
-bool StorageHandlerType::setupStorageHandler(...) { 
+bool StorageHandlerType::queryStorage(std::string queryString) {
 	return false;
 }
 
-StorageHandlerType::~StorageHandlerType() {};
+//bool StorageHandlerType::setupStorageHandler(...) { 
+//	return false;
+//}
+
+StorageHandlerType::~StorageHandlerType() {}
 
