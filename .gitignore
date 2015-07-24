@@ -36,5 +36,8 @@
 ehthumbs.db
 Thumbs.db
 *.out
+<<<<<<< HEAD
 .floo
 .flooignore
+=======
+>>>>>>> origin/master
