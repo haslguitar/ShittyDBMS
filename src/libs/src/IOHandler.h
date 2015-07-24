@@ -27,7 +27,7 @@ public:
 	virtual bool        clearScreen() = 0;
 	virtual bool        setCursorPosition() = 0;
 
-	//virtual bool        setupOutput(...) = 0;
+	//virtual bool        setupIOHandler(...) = 0;
 
 
 	//On destruction, first the derived class is destroyed, then the base.

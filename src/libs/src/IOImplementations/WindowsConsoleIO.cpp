@@ -1,9 +1,9 @@
-#include "IOPlatformType.h"
+#include "IOHandlerType.h"
 #include "IOHandler.h"
 #include <iostream>
 #include <string>
 
-bool IOPlatformType::output(std::string textString) {
+bool IOHandlerType::output(std::string textString) {
 	
 	//Using std::cout to output for Windows. 
 	//Could we switch to something more... Windows?
@@ -13,22 +13,22 @@ bool IOPlatformType::output(std::string textString) {
 	return false;
 }
 
-bool IOPlatformType::output(std::string stringArray[]) {
+bool IOHandlerType::output(std::string stringArray[]) {
     
 	return false;
 }
 
-bool IOPlatformType::output(char* textCstring) {
+bool IOHandlerType::output(char* textCstring) {
 	if (std::cout << textCstring) { return true; }
 	return false;
 }
 
-bool IOPlatformType::output(int integer) {
+bool IOHandlerType::output(int integer) {
     if (std::cout << integer) { return true; }
     return false;
 }
 
-bool IOPlatformType::output(DBTable* tableOutput) {
+bool IOHandlerType::output(DBTable* tableOutput) {
     
 	return false;
 }
@@ -39,25 +39,25 @@ bool IOPlatformType::output(DBTable* tableOutput) {
 //Input functions
 /////////////////
 /////////////////
-int IOPlatformType::getInt() {
+int IOHandlerType::getInt() {
 	int temp;
 	std::cin >> temp;
 	return temp;
 }
 
-char IOPlatformType::getChar() {
+char IOHandlerType::getChar() {
     char temp;
     std::cin.get(temp);
 	return temp;
 }
 
-bool IOPlatformType::getBool() {
+bool IOHandlerType::getBool() {
     bool temp;
     std::cin >> temp;
 	return temp;
 }
 
-std::string IOPlatformType::getString() {
+std::string IOHandlerType::getString() {
     std::string temp;
     getline(std::cin, temp);
 	return temp;
@@ -66,7 +66,7 @@ std::string IOPlatformType::getString() {
 //This should likely return a hash of the input password, not the actual text. 
 //However, since we probably shouldn't leave security up to the IO class,
 //maybe I need to rethink where to hash the password?
-std::string IOPlatformType::getPassword() {
+std::string IOHandlerType::getPassword() {
 
 	return "";
 }
@@ -77,16 +77,16 @@ std::string IOPlatformType::getPassword() {
 //Console functions
 /////////////////
 /////////////////
-bool IOPlatformType::clearScreen() {
+bool IOHandlerType::clearScreen() {
 
 	return false;
 }
 
-bool IOPlatformType::setCursorPosition() {
+bool IOHandlerType::setCursorPosition() {
 
 	return false;
 }
 
 
 //The derived class is destroyed before the base class.
-IOPlatformType::~IOPlatformType() {}
+IOHandlerType::~IOHandlerType() {}

@@ -1,5 +1,5 @@
 
-//This is a generic IOPlatformType header to be used to describe all implementations.
+//This is a generic IOHandlerType header to be used to describe all implementations.
 //All implementations should share the same interface, so it's ok to simplify to a single header.
 //
 //      \﻿ (•◡•) / 
@@ -7,19 +7,19 @@
 //If you want to make an additional implementation (like for another platform),
 //just include this header and IOHandler.h.
 
-#ifndef __IOPLATFORMTYPE__
-#define __IOPLATFORMTYPE__
+#ifndef __IOHANDLERTYPE__
+#define __IOHANDLERTYPE__
 
 #include "IOHandler.h"
 #include "DBTable.h"
 #include <string>
 
 //IOPlatformTypeO is child of IOHandler.  Public functions are left public.
-class IOPlatformType : public IOHandler {
+class IOHandlerType : public IOHandler {
 
 public:
 	//Prototype of IOHandler's virtual output() function for IOPlatformType.
-	bool output(std::string textString);
+	bool output(std::string);
 	bool output(std::string[]);
 	bool output(char*);
 	bool output(int);
@@ -34,10 +34,10 @@ public:
 	bool clearScreen();
 	bool setCursorPosition();
 
-	//bool setupOutput(...);
+	//bool setupIOHandler(...);
 
-	~IOPlatformType();
+	~IOHandlerType();
 };
 
 
-#endif // __IOPLATFORMTYPE__
+#endif // __IOHANDLERTYPE__

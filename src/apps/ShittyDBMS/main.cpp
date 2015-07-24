@@ -38,27 +38,33 @@
 
 //Generic includes
 #include "IOHandler.h"
-#include "IOPlatformType.h"
+#include "IOHandlerType.h"
+#include "StorageHandler.h"
+#include "StorageHandlerType.h"
 #include <string>
 
 int main() {
 	
 	//Create IOHandler based on platform.
-	IOHandler *myHandler = new IOPlatformType();
+	IOHandler *myIOHandler = new IOHandlerType();
+
+	//Create a StorageHandler
+	StorageHandler *myStorageHandler = new StorageHandlerType();
 
 	//Using IOHandler
 	std::string text = "hey";
-	myHandler->output(text);
+	myIOHandler->output(text);
 
 	std::string text_2 = "\nEnter an int: ";
-	myHandler->output(text_2);
+	myIOHandler->output(text_2);
 	
-	int anInt = myHandler->getInt();
-	myHandler->output(anInt);
+	int anInt = myIOHandler->getInt();
+	myIOHandler->output(anInt);
 
 	//Delete the IOHandler object
 	//The destructor for the derived class is called first.
-	delete myHandler;
+	delete myIOHandler;
+	delete myStorageHandler;
 	
 	return 0;
 }

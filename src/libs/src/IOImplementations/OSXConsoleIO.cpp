@@ -1,4 +1,4 @@
-#include "IOPlatformType.h"
+#include "IOHandlerType.h"
 #include "IOHandler.h"
 #include "DBTable.h"
 #include <iostream>
@@ -14,7 +14,7 @@ int positionY = 0;
 //Output functions
 /////////////////
 /////////////////
-bool IOPlatformType::output(std::string textString) {
+bool IOHandlerType::output(std::string textString) {
 	
 	//Using std::cout to output for MACIO. 
 	//Could we switch to something more... OSX?
@@ -24,17 +24,17 @@ bool IOPlatformType::output(std::string textString) {
 	return false;
 }
 
-bool IOPlatformType::output(std::string stringArray[]) {
+bool IOHandlerType::output(std::string stringArray[]) {
 
 	return false;
 }
 
-bool IOPlatformType::output(char* textCstring) {
+bool IOHandlerType::output(char* textCstring) {
 
 	return false;
 }
 
-bool IOPlatformType::output(DBTable* tableOutput) {
+bool IOHandlerType::output(DBTable* tableOutput) {
 
 	return false;
 }
@@ -44,21 +44,21 @@ bool IOPlatformType::output(DBTable* tableOutput) {
 //Input functions
 /////////////////
 /////////////////
-int IOPlatformType::getInt() {
+int IOHandlerType::getInt() {
 	return 0;
 }
 
-char IOPlatformType::getChar() {
+char IOHandlerType::getChar() {
 
 	return 'a';
 }
 
-bool IOPlatformType::getBool() {
+bool IOHandlerType::getBool() {
 
 	return false;
 }
 
-std::string IOPlatformType::getString() {
+std::string IOHandlerType::getString() {
 
 	return "";
 }
@@ -66,7 +66,7 @@ std::string IOPlatformType::getString() {
 //This should likely return a hash of the input password, not the actual text. 
 //However, since we probably shouldn't leave security up to the IO class,
 //maybe I need to rethink where to hash the password?
-std::string IOPlatformType::getPassword() {
+std::string IOHandlerType::getPassword() {
 
 	return "";
 }
@@ -77,16 +77,16 @@ std::string IOPlatformType::getPassword() {
 //Console functions
 /////////////////
 /////////////////
-bool IOPlatformType::clearScreen() {
+bool IOHandlerType::clearScreen() {
 
 	return false;
 }
 
-bool IOPlatformType::setCursorPosition() {
+bool IOHandlerType::setCursorPosition() {
 
 	return false;
 }
 
 
 //The derived class is destroyed before the base class.
-IOPlatformType::~IOPlatformType() {}
+IOHandlerType::~IOHandlerType() {}
