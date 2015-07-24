@@ -2,6 +2,7 @@
 *.o
 *.pyc
 *~
+*.obj
 extern/
 node_modules/
 tmp
