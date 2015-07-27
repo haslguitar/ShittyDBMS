@@ -9,27 +9,21 @@ class BaseClass {
 
 class DerivedClass : public BaseClass {
  public:
-    DerivedClass() { std::cout << "derived\n"; }
+    int x;
+    int a = 1;
+    DerivedClass() { std::cout << "derived\n"; x = 2; }
 };
 
 int main() {
-  DerivedClass *myDerived2 = new DerivedClass();
-  
-  std::cout << "calling base:\n";
   
   BaseClass *myBase = new BaseClass();
-  
-  std::cout << "calling derived:\n";
-  
-  DerivedClass *myDerived = new DerivedClass();
+  DerivedClass *myDerived;
   
   std::cout << "Casting base to derived:\n";
   
-  myDerived = static_cast<DerivedClass>(myBase);
+  myDerived = static_cast<DerivedClass*>(myBase);
   
-  std::cout << "Casting derived to base:\n";
-  
-  myBase = static_cast<BaseClass>(myDerived);
+  //std::cout << myDerived->x << std::endl;
   
   return 0;
 }
