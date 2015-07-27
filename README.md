@@ -6,7 +6,7 @@ We use Floobits!
 [![Floobits Status](https://floobits.com/haslguitar/ShittyDBMS.svg)](https://floobits.com/haslguitar/ShittyDBMS/redirect)
 
 ## Compilation
-To compile link main, IOHandler, StorageHandler, and your choice of implementation for both IOHandler and StorageHandler.
+To compile, link main, IOHandler, StorageHandler, and your choice of implementation for both IOHandler and StorageHandler.
 
  `g++ -o output.exe ./src/apps/ShittyDBMS/main.cpp ./src/libs/src/IOHandler.cpp ./src/libs/src/StorageHandler.cpp ./src/libs/src/IOImplementations/StandardConsoleIO.cpp ./src/libs/src/StorageImplementations/NULLStorage.cpp  -I ./src/libs/src`
 
