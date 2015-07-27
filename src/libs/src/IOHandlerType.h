@@ -20,13 +20,11 @@
 // IOPlatformType is child of IOHandler.  Public functions are left public.
 class IOHandlerType : public IOHandler {
  public:
-    // Prototype of IOHandler's virtual output() function for IOPlatformType.
-    bool output(std::string);
-    bool output(std::string[]);
-    bool output(char*);
-    bool output(int);
-    bool output(DBTable*);
-
+    // Template output() so it can be implemented in
+    // IOImplementations to accept multiple types
+    template<typename T>
+    void output(T);
+    
     int getInt();
     char getChar();
     bool getBool();
@@ -40,5 +38,6 @@ class IOHandlerType : public IOHandler {
 
     ~IOHandlerType();
 };
+
 
 #endif  // __IOHANDLERTYPE__

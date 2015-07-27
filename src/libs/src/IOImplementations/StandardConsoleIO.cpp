@@ -19,33 +19,27 @@
 // return false;
 //}
 
-bool IOHandlerType::output(std::string textString) {
-    if (std::cout << std::setw(0) << textString) {
-        return true;
-    }
-
-    return false;
+// Generic use for output()
+template<typename T>
+void IOHandler::output(T outputThing) {
+    std::cout << outputThing;
 }
 
-// std::string myString[] = {"Welcome to ShittyDBMS",
-//                          "by james morse",
-//                          "cody fleetwood"};
-bool IOHandlerType::output(std::string stringArray[]) {
-    return (this->output(stringArray[0]));
-}
+// Instantiate different versions of output() template
+// This is required so functions are generated in vtable
+// Without these, the compiler doesn't know what types
+// could possibly sent to output(), so it wouldn't
+// generate any code.  Poor, sad compiler.
+template void IOHandler::output<int>(int);
+template void IOHandler::output<std::string>(std::string);
 
-bool IOHandlerType::output(char* textCstring) {
-    if (std::cout << textCstring) { return true; }
-    return false;
+// Template specialization for accepting chars.
+// This was just a test.
+template<> void IOHandler::output<char>(char outputThing) {
+    std::cout << "char specialization: " << outputThing;
 }
-
-bool IOHandlerType::output(int integer) {
-    if (std::cout << integer) { return true; }
-    return false;
-}
-
-bool IOHandlerType::output(DBTable* tableOutput) {
-    return false;
+template<> void IOHandler::output<const char*>(const char* outputThing) {
+    std::cout << "char* specialization: " << outputThing;
 }
 
 /////////////////
