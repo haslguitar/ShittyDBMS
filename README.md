@@ -7,7 +7,8 @@ We use Floobits!
 
 ## Compilation
 To compile link main, IOHandler, StorageHandler, and your choice of implementation for both IOHandler and StorageHandler.
-Ex: `g++ -o output.exe ./src/apps/ShittyDBMS/main.cpp ./src/libs/src/IOHandler.cpp ./src/libs/src/StorageHandler.cpp ./src/libs/src/IOImplementations/StandardConsoleIO.cpp ./src/libs/src/StorageImplementations/NULLStorage.cpp  -I ./src/libs/src`
+
+ `g++ -o output.exe ./src/apps/ShittyDBMS/main.cpp ./src/libs/src/IOHandler.cpp ./src/libs/src/StorageHandler.cpp ./src/libs/src/IOImplementations/StandardConsoleIO.cpp ./src/libs/src/StorageImplementations/NULLStorage.cpp  -I ./src/libs/src`
 
 ## Contributors
 Cody Fleetwood 
