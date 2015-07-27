@@ -1,3 +1,0 @@
-cl ./src/apps/ShittyDBMS/main.cpp ./src/libs/src/IOHandler.cpp ./src/libs/src/StorageHandler.cpp ./src/libs/src/IOImplementations/StandardConsoleIO.cpp ./src/libs/src/StorageImplementations/NULLStorage.cpp /Fefuckem.exe /I ./src/libs/src
-
-g++ -std=c++11 -o fuckem.exe ./src/apps/ShittyDBMS/main.cpp ./src/libs/src/IOHandler.cpp ./src/libs/src/StorageHandler.cpp ./src/libs/src/IOImplementations/StandardConsoleIO.cpp ./src/libs/src/StorageImplementations/NULLStorage.cpp  -I ./src/libs/src

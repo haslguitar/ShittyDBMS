@@ -1,3 +1,8 @@
+// StorageHandlerType.h
+// Copyright 2015
+// Cody Fleetwood
+// James Morse
+
 #ifndef __STORAGEHANDLERTYPE__
 #define __STORAGEHANDLERTYPE__
 
@@ -8,14 +13,14 @@
 
 class StorageHandlerType : public StorageHandler {
 
-public:
-	bool queryStorage(std::string);
+ public:
+    bool queryStorage(std::string);
 
-//	bool setupStorageHandler(...);
+//  bool setupStorageHandler(...);
 
-	~StorageHandlerType();
-    
+    ~StorageHandlerType();
+
 };
 
 
-#endif // __STORAGEHANDLERTYPE__
+#endif  // __STORAGEHANDLERTYPE__
